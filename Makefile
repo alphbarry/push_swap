@@ -6,7 +6,7 @@
 #    By: alphbarr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/02 14:10:47 by alphbarr          #+#    #+#              #
-#    Updated: 2024/07/03 18:16:53 by alphbarr         ###   ########.fr        #
+#    Updated: 2024/07/05 19:59:08 by alphbarr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,16 +39,7 @@ SRC_DIR		=	sources/
 OBJ_DIR		=	objects/
 
 #<--------------------------------->FILES<---------------------------------->#
-FILES		=	main.c \
-				change_window_size.c \
-				deal_key.c \
-				draw.c \
-				utils2.c \
-				keys.c \
-				print_menu.c \
-				read_map.c \
-				set_param.c \
-				utils.c
+FILES		=	
 
 #<--------------------------------->SRCS<----------------------------------->#
 SRCS		=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))
