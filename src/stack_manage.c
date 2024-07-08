@@ -10,7 +10,7 @@ static	int	array_len(char	**av)
 	return (i);
 }
 
-void	ft_error(int	ac, char **av)
+void	ft_error(int ac, char **av)
 {
 	char	**p;
 
