@@ -12,18 +12,8 @@ static	int	array_len(char	**av)
 
 void	ft_error(int ac, char **av)
 {
-	char	**p;
-
-	if (ac == 2)
-	{
-		p = av;
-		while (*p)
-		{
-			free(p);
-			p++;
-		}
-		free(av);
-	}
+	(void)ac;
+	(void)av;
 	ft_printf("Error\n");
 	exit (1);
 }

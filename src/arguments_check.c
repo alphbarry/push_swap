@@ -47,16 +47,16 @@ static int	ft_is_repeated(char **av, int a, int n)
 	int	i;
 
 	i = 0;
-	while (av[i] && I < a)
+	while (av[i] && i < a)
 	{
-		if (ft_atoi(av[i] = n))
+		if (ft_atoi(av[i]) == n)
 			return (0);
 		i++;
 	}
 	return (1);
 }
 
-void	check_argument(int	ac, char **av)
+void	check_arguments(int	ac, char **av)
 {
 	int	i;
 

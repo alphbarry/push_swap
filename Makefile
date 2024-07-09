@@ -6,7 +6,7 @@
 #    By: alphbarr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/02 14:10:47 by alphbarr          #+#    #+#              #
-#    Updated: 2024/07/05 19:59:08 by alphbarr         ###   ########.fr        #
+#    Updated: 2024/07/09 19:39:39 by alphbarr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,11 +35,20 @@ PRINTF_H	=	./libs/ft_printf/inc/
 LIBFT_H		=	./libs/libft/
 
 #<--------------------------------->DIRS<------------------------------------>#
-SRC_DIR		=	sources/
+SRC_DIR		=	src/
 OBJ_DIR		=	objects/
 
 #<--------------------------------->FILES<---------------------------------->#
-FILES		=	
+FILES		=	main.c \
+				push.c \
+				swap.c \
+				rotate.c \
+				rrotate.c \
+				arguments_check.c \
+				stack_manage.c \
+				smallsort.c \
+				bigsort.c \
+				chunksort.c
 
 #<--------------------------------->SRCS<----------------------------------->#
 SRCS		=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(FILES)))
@@ -53,7 +62,8 @@ INCLUDE		=	-I$(HEADER) -I$(PRINTF_H) -I$(LIBFT_H)
 RM			=	rm -rf
 MKD			=	mkdir -p
 MK			=	Makefile
-CFLAGS		=	-Wall -Wextra -Werror -O3# -fsanitize=address
+CC			=	cc
+CFLAGS		=	-Wall -Wextra -Werror
 MKFLAGS		=	--no-print-directory
 
 #<--------------------------------->RULES<----------------------------------->#
@@ -69,7 +79,7 @@ all				:
 
 $(NAME)			:	$(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) $(LIB_A) -o $@
-	@echo "\n$(GREEN)FdF has been compiled$(DEF_COLOR)"
+	@echo "\n$(GREEN)push_swap has been compiled$(DEF_COLOR)"
 
 clean			:
 	@$(MAKE) $(MKFLAGS) clean -C $(LIBRARY)
@@ -89,7 +99,7 @@ re				:
 	@$(MAKE) $(MKFLAGS) fclean
 	@$(MAKE) $(MKFLAGS) all
 	@echo ""
-	@echo "$(CIAN)FdF has been recompiled$(DEF_COLOR)"
+	@echo "$(CIAN)push_swap has been recompiled$(DEF_COLOR)"
 
 .PHONY			: all clean fclean re
 

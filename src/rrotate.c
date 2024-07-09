@@ -31,5 +31,5 @@ void	rrr(t_stack *s_a, t_stack *s_b)
 {
 	r_rotate(s_a);
 	r_rotate(s_b);
-	ft_printf("rrs\n");
+	ft_printf("rrr\n");
 }
