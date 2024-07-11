@@ -6,7 +6,7 @@
 /*   By: alphbarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 18:04:18 by alphbarr          #+#    #+#             */
-/*   Updated: 2024/07/09 19:40:22 by alphbarr         ###   ########.fr       */
+/*   Updated: 2024/07/11 17:04:58 by alphbarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -23,13 +23,15 @@
 
 typedef struct s_stack
 {
-	int	n[1024];
-	int	top;
-	int	size;
+	int				n[1024];
+	int				top;
+	int				size;
+	struct s_stack	*next;
 }	t_stack;
 
 /* Arguments check */
 void	check_arguments(int ac, char **av);
+int		is_sorted(t_stack *stack);
 
 /* management of stack */
 t_stack	*start_stack_a(char **av);

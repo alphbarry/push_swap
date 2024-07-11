@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   arguments_check.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alphbarr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/11 14:05:09 by alphbarr          #+#    #+#             */
+/*   Updated: 2024/07/11 17:30:01 by alphbarr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/push_swap.h"
 
 static int	ft_check_len(char *s)
@@ -23,6 +35,21 @@ static int	ft_check_len(char *s)
 	num *= sn;
 	if (num > INT_MAX || num < INT_MIN)
 		return (0);
+	return (1);
+}
+
+int	is_sorted(t_stack *stack)
+{
+	int	i;
+
+	i = 0;
+	while (i < stack->top)
+	{
+		if (stack->n[i] > stack->n[i + 1])
+			i++;
+		else
+			return (0);
+	}
 	return (1);
 }
 
@@ -56,7 +83,7 @@ static int	ft_is_repeated(char **av, int a, int n)
 	return (1);
 }
 
-void	check_arguments(int	ac, char **av)
+void	check_arguments(int ac, char **av)
 {
 	int	i;
 

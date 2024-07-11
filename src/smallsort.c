@@ -3,6 +3,7 @@
 void	sort3(t_stack *s_a)
 {
 	int	*n;
+
 	n = s_a->n;
 	if (n[2] > n[1] && n[1] > n[0] && n[0] < n[2])
 	{
@@ -54,27 +55,27 @@ void	sort5(t_stack *s_a, t_stack *s_b)
 
 void	smallsort(t_stack *s_a, t_stack *s_b)
 {
-	 if (s_a->size == 1)
-		 return ;
-	 else if (s_a->size == 2)
-	 {
-		 if (s_a->n[s_a->top] > s_a->n[s_a->top - 1])
-			 sa(s_a);
-	 }
-	 else if (s_a->size == 3)
-		 sort3(s_a);
-	 else if (s_a->size == 4)
-	 {
-		 smallest_num(s_a, s_b);
-		 sort3(s_a);
-		 pa(s_a, s_b);
-	 }
-	 else if (s_a->size == 5)
-	 	sort5(s_a, s_b);
-	 else
-	 {
+	if (s_a->size == 1)
+		return ;
+	else if (s_a->size == 2)
+	{
+		if (s_a->n[s_a->top] > s_a->n[s_a->top - 1])
+			sa(s_a);
+	}
+	else if (s_a->size == 3)
+		sort3(s_a);
+	else if (s_a->size == 4)
+	{
+		smallest_num(s_a, s_b);
+		sort3(s_a);
+		pa(s_a, s_b);
+	}
+	else if (s_a->size == 5)
+		sort5(s_a, s_b);
+	else
+	{
 		smallest_num(s_a, s_b);
 	 	sort5(s_a, s_b);
 		pa(s_a, s_b);
-	 }
+	}
 }

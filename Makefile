@@ -6,7 +6,7 @@
 #    By: alphbarr <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/02 14:10:47 by alphbarr          #+#    #+#              #
-#    Updated: 2024/07/09 19:39:39 by alphbarr         ###   ########.fr        #
+#    Updated: 2024/07/11 17:35:50 by alphbarr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,33 @@ MK			=	Makefile
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 MKFLAGS		=	--no-print-directory
+
+ARG_FILE := args.txt
+# 5 nums max 12 moves
+# 100 max 700
+# 500 max 5500
+NUM_QTY := 500
+MAX_MOVES := 5500
+generate_arg: 
+	@shuf -i 0-5000000 -n $(NUM_QTY) > $(ARG_FILE)
+
+test: $(NAME) generate_arg
+	@ARG=$$(cat $(ARG_FILE)); \
+	RESULT=$$(./$(NAME) $$ARG | ./checker_linux $$ARG); \
+	if [ "$$RESULT" = "OK" ]; then \
+		COLOR="\033[0;32m"; \
+	else \
+		COLOR="\033[0;31m"; \
+	fi; \
+	echo "󱝿⚙️ Checker verify: $$COLOR$$RESULT\033[0m"; \
+	echo -n "🔢 Num of moves:    "; \
+	NUM_MOVES=$$(./$(NAME) $$ARG | wc -l); \
+	if [ "$$NUM_MOVES" -lt $(MAX_MOVES) ]; then \
+		COLOR="\033[0;32m"; \
+	else \
+		COLOR="\033[0;31m"; \
+	fi; \
+	echo "$$COLOR$$NUM_MOVES\033[0m"
 
 #<--------------------------------->RULES<----------------------------------->#
 $(OBJ_DIR)%.o	:$(SRC_DIR)%.c $(LIB_A) $(MK)

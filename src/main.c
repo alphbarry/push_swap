@@ -6,26 +6,13 @@
 /*   By: alphbarr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 18:29:46 by alphbarr          #+#    #+#             */
-/*   Updated: 2024/07/09 19:57:09 by alphbarr         ###   ########.fr       */
+/*   Updated: 2024/07/11 17:30:37 by alphbarr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../inc/push_swap.h"
 
-int	is_sorted(t_stack *stack)
-{
-	int	i;
 
-	i = 0;
-	while (i < stack->size - 1)
-	{
-		if (stack->n[i] > stack->n[i + 1])
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-/*void print_stack(t_stack *stack)
+void print_stack(t_stack *stack)
 {
     int	i;
 
@@ -35,7 +22,7 @@ int	is_sorted(t_stack *stack)
 		ft_printf("%d\n", stack->n[i]);
 		i--;
 	}
-}*/
+}
 
 int	main(int ac, char **av)
 {
@@ -67,7 +54,6 @@ int	main(int ac, char **av)
 		else
 			bigsort(s_a, s_b);
 	}
-	//print_stack(s_a);
 	ft_free_stacks(ac, args, s_a, s_b);
 	return (0);
 }

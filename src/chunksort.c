@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   chunksort.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alphbarr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/11 14:02:25 by alphbarr          #+#    #+#             */
+/*   Updated: 2024/07/11 14:03:14 by alphbarr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/push_swap.h"
 
 static int	still_chunk(t_stack *s_a, int chunk_start, int chunk_end)
@@ -13,7 +25,6 @@ static int	still_chunk(t_stack *s_a, int chunk_start, int chunk_end)
 	}
 	return (0);
 }
-
 
 static int	cost_from_top(t_stack *s_a, int chunk_start, int chunk_end)
 {
