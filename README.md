@@ -17,6 +17,7 @@ El proyecto se divide en dos partes:
 ---
 
 ## 🛠️ Estructura
+```bash
 .
 ├── includes/
 │   └── push_swap.h
