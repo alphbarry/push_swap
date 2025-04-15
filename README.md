@@ -94,11 +94,9 @@ El programa acepta únicamente números enteros, sin duplicados, en un solo stri
 ./push_swap "2 1 3 6 5 8"
 
 ✍️ Autor
-👤 alphbarr
+👤 alphbarr, alphaomar9@gmail.com
 
-🏫 42 Network
-
-📫 GitHub: @alphbarr (o el enlace que prefieras)
+📫 GitHub: @alphbarr
 
 🧠 Bonus ideas
 Visualizador gráfico.
