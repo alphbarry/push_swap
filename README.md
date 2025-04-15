@@ -47,39 +47,31 @@ El proyecto se divide en dos partes:
 
 ⚙️ Compilación
 Compila el proyecto ejecutando:
-
 make
 
 Limpieza de objetos:
-
 make clean
 
 Limpieza total:
-
 make fclean
 
 Recompilación:
-
 make re
 
 🚀 Uso
-
 ./push_swap 3 2 1
 
 O bien con comillas:
-
 ./push_swap "3 2 1"
 
 🧪 Testeo automático
 El Makefile incluye una regla test que genera argumentos aleatorios y valida con checker_linux:
-
 make test
 
 Opcionalmente, puedes cambiar la cantidad de números modificando NUM_QTY y MAX_MOVES al principio del Makefile.
 
 ✅ Reglas de rendimiento
 Para que el proyecto sea considerado correcto, se deben cumplir los siguientes límites:
-
 Cantidad de números	Movimientos máximos
 3	                3
 5	                12
@@ -88,7 +80,6 @@ Cantidad de números	Movimientos máximos
 
 📂 Formato del input
 El programa acepta únicamente números enteros, sin duplicados, en un solo string o separados por espacios:
-
 ./push_swap 2 1 3 6 5 8
 ./push_swap "2 1 3 6 5 8"
 
