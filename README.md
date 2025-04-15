@@ -82,8 +82,8 @@ Opcionalmente, puedes cambiar la cantidad de números modificando NUM_QTY y MAX_
 Para que el proyecto sea considerado correcto, se deben cumplir los siguientes límites:
 
 Cantidad de números	Movimientos máximos
-3	                 3
-5	                 12
+3	                3
+5	                12
 100	                700
 500	                5500
 
