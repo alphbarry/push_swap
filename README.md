@@ -37,7 +37,7 @@ El proyecto se divide en dos partes:
 │   └── chunksort.c
 ├── Makefile
 └── README.md
-
+```
 🧠 Algoritmos implementados
 🧩 Chunk Sort: Para manejar grandes cantidades de números.
 
