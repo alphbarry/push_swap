@@ -82,10 +82,10 @@ Opcionalmente, puedes cambiar la cantidad de números modificando NUM_QTY y MAX_
 Para que el proyecto sea considerado correcto, se deben cumplir los siguientes límites:
 
 Cantidad de números	Movimientos máximos
-3	3
-5	12
-100	700
-500	5500
+3	                  3
+5	                  12
+100	                700
+500	                5500
 
 📂 Formato del input
 El programa acepta únicamente números enteros, sin duplicados, en un solo string o separados por espacios:
